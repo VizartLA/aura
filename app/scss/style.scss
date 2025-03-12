@@ -1,5 +1,7 @@
-@import "reset";
-@import "../../node_modules/swiper/swiper-bundle";
+@use "app/scss/reset";
+@use "app/scss/media";
+@use "../../node_modules/swiper/swiper-bundle";
+
 
 @font-face {
   font-family: "Muller";
@@ -878,4 +880,3 @@ body {
   }
 }
 
-@import "media";
