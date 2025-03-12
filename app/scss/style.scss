@@ -136,12 +136,10 @@ body {
 
       &::after {
         width: 110%;
-        background: linear-gradient(
-          90deg,
-          rgba(70, 244, 219, 0) 0%,
-          #46f4db 50%,
-          rgba(70, 244, 219, 0) 100%
-        );
+        background: linear-gradient(90deg,
+            rgba(70, 244, 219, 0) 0%,
+            #46f4db 50%,
+            rgba(70, 244, 219, 0) 100%);
       }
     }
 
@@ -171,18 +169,17 @@ body {
       left: 50%;
       width: 300px;
       height: 300px;
-      background: radial-gradient(
-        circle,
-        rgba(70, 244, 219, 0.3) 0%,
-        rgba(70, 244, 219, 0) 70%
-      );
+      background: radial-gradient(circle,
+          rgba(70, 244, 219, 0.3) 0%,
+          rgba(70, 244, 219, 0) 70%);
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.6s ease;
       pointer-events: none;
     }
 
     &:hover {
-      background-color: lighten(#06060b, 5%);
+      background-color: #06060b;
+      filter: brightness(92%);
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 8px 25px rgba(70, 244, 219, 0.4);
       border-color: #46f4db;
@@ -242,7 +239,8 @@ body {
     }
 
     &:hover {
-      color: darken(#06060b, 15%);
+      color: #06060b;
+      filter: brightness(85%);
 
       &::before {
         width: 100%;
@@ -337,12 +335,10 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0.3) 50%,
-          rgba(255, 255, 255, 0.1) 100%
-        );
+        background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
         transform: translateX(-100%);
         transition: transform 0.6s ease;
         mix-blend-mode: overlay;
@@ -518,7 +514,8 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-      background-color: darken(#46f4db, 8%);
+      background-color: #46f4db;
+      filter: brightness(92%);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       border-color: rgba(0, 0, 0, 0.1);
@@ -646,7 +643,7 @@ body {
     justify-content: center;
   }
 
-  &-button {
+  &__button {
     padding: 25px 80px;
     background-color: #46f4db;
     border-radius: 40px;
@@ -658,7 +655,8 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-      background-color: darken(#46f4db, 8%);
+      background-color: #46f4db;
+      filter: brightness(92%);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       border-color: rgba(0, 0, 0, 0.1);
@@ -671,6 +669,7 @@ body {
         transform: translateX(100%);
       }
     }
+
     &:active {
       transform: translateY(1px);
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -681,45 +680,46 @@ body {
 
 .gallery {
   background-color: #000;
+
   &__inner {
     padding: 90px;
   }
+
   &__top {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 32px;
   }
+
   &__inner-img {
     max-width: 48px;
     width: 100%;
     margin-right: 16px;
   }
+
   &__inner-title {
     font-family: "RussoOne", sans-serif;
     font-size: 60px;
     font-weight: 500;
     color: #fff;
   }
- 
+
   &__wrapper {
     margin-bottom: 90px;
   }
+
   &__slide-img {
     max-width: 1280px;
     width: 100%;
   }
-  &__swiper-pagination {
-    font-size: 16px;
-    
-  }
+
   &__pagination-bullet {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     gap: 10px;
-    z-index: 10;
   }
 }
 
@@ -730,25 +730,152 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000;
-  border: 2px solid #D13130;
-  border-radius: 50%;
-  color: #D13130;
-  font-size: 14px;
+  border: 2px solid #d13130;
+  border-radius: 40%;
+  color: #fff;
+  font-size: 16px;
   font-weight: bold;
   opacity: 1;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 24px;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #D13130;
+  background-color: #d13130;
   color: #fff;
-  border-color: #D13130;
+  border-color: #d13130;
 }
 
 .swiper-pagination-bullet:hover {
   transform: scale(1.1);
 }
 
+.subscribe {
+  background-color: #d13130;
+
+  &__container {
+    background-image: url(../images/subscride-bg.webp);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    padding-top: 32px;
+    padding-bottom: 31px;
+    background-size: contain;
+  }
+
+  &__title {
+    font-family: "RussoOne", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    border: none;
+    border-radius: 40px;
+    background-color: #000;
+    max-width: 460px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 32px;
+    padding: 25px;
+    margin-bottom: 16px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__input::placeholder {
+    color: #ededf2;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Muller", sans-serif;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  &__button {
+    padding: 25px 74px;
+    background-color: #46f4db;
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    max-width: 296px;
+    width: 100%;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background-color: #46f4db;
+      filter: brightness(92%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 0, 0, 0.1);
+
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      &::after {
+        transform: translateX(100%);
+      }
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition-duration: 0.1s;
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__checkbox-input {
+    margin-right: 10px;
+    vertical-align: middle;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  &__checkbox-input:checked + &__checkbox-custom {
+    background-image: url(../images/checkbox.svg);
+    border-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__checkbox-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
 
 @import "media";
