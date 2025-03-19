@@ -137,10 +137,12 @@ body {
 
       &::after {
         width: 110%;
-        background: linear-gradient(90deg,
-            rgba(70, 244, 219, 0) 0%,
-            #46f4db 50%,
-            rgba(70, 244, 219, 0) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(70, 244, 219, 0) 0%,
+          #46f4db 50%,
+          rgba(70, 244, 219, 0) 100%
+        );
       }
     }
 
@@ -170,9 +172,11 @@ body {
       left: 50%;
       width: 300px;
       height: 300px;
-      background: radial-gradient(circle,
-          rgba(70, 244, 219, 0.3) 0%,
-          rgba(70, 244, 219, 0) 70%);
+      background: radial-gradient(
+        circle,
+        rgba(70, 244, 219, 0.3) 0%,
+        rgba(70, 244, 219, 0) 70%
+      );
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.6s ease;
       pointer-events: none;
@@ -336,10 +340,12 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.3) 50%,
-            rgba(255, 255, 255, 0.1) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
         transform: translateX(-100%);
         transition: transform 0.6s ease;
         mix-blend-mode: overlay;
@@ -552,7 +558,6 @@ body {
     flex-wrap: wrap;
     gap: 32px;
     margin-bottom: 32px;
-    
   }
 
   &__item {
@@ -561,11 +566,10 @@ body {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    box-shadow 0.3s ease;
+      box-shadow 0.3s ease;
     transform-origin: center center;
     will-change: transform;
     border-radius: 40px;
-    
 
     &:hover {
       transform: scale(1.05);
@@ -867,7 +871,7 @@ body {
     vertical-align: middle;
   }
 
-  &__checkbox-input:checked+&__checkbox-custom {
+  &__checkbox-input:checked + &__checkbox-custom {
     background-image: url(../images/checkbox.svg);
     border-color: #fff;
     background-repeat: no-repeat;
@@ -883,7 +887,7 @@ body {
 
 .creator {
   margin-top: 90px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 
   &__inner {
     display: flex;
@@ -934,14 +938,12 @@ body {
     max-width: 624px;
     min-height: 342px;
     width: 100%;
-    background-color: #EDEDF2;
-    color: #95959D;
+    background-color: #ededf2;
+    color: #95959d;
     border-radius: 40px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 32px;
-
-   
   }
 
   &__upload-icon {
@@ -961,17 +963,16 @@ body {
   &__cross {
     width: 40px;
     height: 5px;
-    background-color: #EDEDF2;
+    background-color: #ededf2;
     position: absolute;
 
     &::before {
-      content: '';
+      content: "";
       width: 40px;
       height: 5px;
-      background-color: #EDEDF2;
+      background-color: #ededf2;
       position: absolute;
       transform: rotate(90deg);
-
     }
   }
 
@@ -991,7 +992,7 @@ body {
   &__telegram-input {
     border: none;
     border-radius: 40px;
-    background-color: #EDEDF2;
+    background-color: #ededf2;
     max-width: 624px;
     width: 100%;
     font-size: 20px;
@@ -1043,6 +1044,144 @@ body {
       transform: translateY(1px);
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       transition-duration: 0.1s;
+    }
+  }
+}
+
+.top-sales {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #000;
+  &__title {
+    font-family: "RussoOne", sans-serif;
+    font-size: 60px;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+  &__list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    max-width: 624px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      box-shadow 0.3s ease;
+    transform-origin: center center;
+    will-change: transform;
+    border-radius: 40px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: scale(0.98);
+      transition-duration: 0.1s;
+    }
+  }
+  &__product {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px 0 0 40px;
+    background-color: #ededf2;
+    padding: 16px;
+    padding-right: 0;
+    img {
+      max-width: 141px;
+      width: 100%;
+    }
+  }
+  &__product-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+  &__owner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__owner-img {
+    max-width: 24px;
+    width: 100%;
+  }
+  &__owner-nickname {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__product-title {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__info {
+    display: inline-flex;
+    gap: 5px;
+  }
+  &__info-cripta {
+    font-weight: 700;
+  }
+  &__info-price {
+    font-weight: 700;
+    color: #95959d;
+  }
+}
+
+.requirements {
+  background-color: #37373e;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  &__item-img {
+    max-width: 32px;
+    width: 100%;
+  }
+  &__item-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+  &__image {
+    img {
+      max-width: 460px;
+      width: 100%;
     }
   }
 }
