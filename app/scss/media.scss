@@ -1,0 +1,224 @@
+@media (max-width: 1380px) {
+  .hero {
+    background-image: url(../images/hero-mini-bg.webp);
+  }
+  .top-sales {
+    &__item {
+        
+        flex: 1 1 calc(50% - 25px);
+    }
+  }
+  
+  
+}
+
+@media (max-width: 1024px) {
+    .auction {
+        &__inner {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .gallery {
+        &__inner {
+            padding: 30px;
+        }
+    }
+
+    .subscribe {
+      
+        &__container {
+          background-image: none;
+        }
+}
+.top-sales {
+    &__item {
+        
+        flex: 1 1 calc(100% - 25px);
+    }
+    &__list {
+        
+        li:nth-child(even) {
+          
+            margin-right: auto;
+          
+        }
+
+        li:nth-child(odd) {
+            margin-left: auto;
+        }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    &__navigation-list {
+      justify-content: center;
+    }
+    &__navigation {
+      order: 1;
+      flex: 1 1 calc(100% - 25px);
+      border-top: 3px solid #c4c4c4;
+      padding-top: 15px;
+    }
+
+    &__button {
+      display: none;
+    }
+    &__button-mini {
+      display: flex;
+    }
+  }
+
+  .hero {
+    background-position: calc(130% + 9px) top;
+  }
+
+  .gallery {
+    &__inner {
+        padding: 30px;
+    }
+  }
+
+  .creator {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+  }
+
+  
+}
+
+@media (max-width: 638px){
+    .hero {
+        height: 500px;
+       background-image: none;
+
+       &__btn {
+        padding: 20px 35px;
+        span {
+            font-size: 18px;
+        }
+       }
+      }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__navigation-list {
+      gap: 20px;
+    }
+    &__navigation-item {
+      font-size: 18px;
+    }
+  }
+
+  .hero {
+    background-position: bottom;
+    height: 500px;
+    background-image: url(../images/hero-smart-bg.webp);
+    background-size: contain;
+    margin-bottom: 30px;
+
+    &__container {
+        padding-top: 30px;
+        justify-content: flex-start;
+    }
+
+    &__buttons {
+        gap: 25px;
+    }
+  }
+
+  .auction {
+    margin-bottom: 30px;
+    &__title-logo {
+        max-width: 75px;
+    }
+    &__price {
+        max-width: 250px;
+        width: 100%;
+        border-radius: 25px;
+        padding: 20px;
+    }
+    &__timer {
+        background-image: none;
+        max-width: 290px;
+    }
+  }
+
+  .spotlight {
+    margin-bottom: 30px;
+    &__item {
+        display: none;
+        &:last-child {
+            display: block;
+        }
+    }
+    &__button {
+        padding: 25px 40px;
+    }
+  }
+
+  .gallery {
+
+    &__top {
+        align-items: baseline;
+    }
+    &__inner {
+        padding: 10px;
+    }
+    &__inner-title {
+        font-size: 25px;
+  }
+
+  &__inner-img {
+    max-width: 25px;
+    margin-right: 5px;
+  }
+}
+
+.creator {
+    &__upload-text {
+        font-size: 18px;
+    }
+
+    &__upload-label {
+        min-height: 250px;
+    }
+}
+
+.top-sales {
+    display: none;
+}
+
+.requirements {
+    &__inner {
+        margin-bottom: 20px;
+    }
+    
+}
+
+.footer {
+    &__navigation-item {
+        font-size: 16px;
+    }
+    &__container {
+        justify-content: center;
+    }
+    &__logo-img {
+        display: none;
+    }
+}
+}
